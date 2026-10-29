@@ -1,3 +1,4 @@
 nombre = "Tomas"
-print("Hola, soy", nombre, "y estoy empezando a construir cosas")
+nombre2 = "tomás"
+print("Hola, soy", nombre2, "y estoy empezando a construir cosas")
 print("Queso")

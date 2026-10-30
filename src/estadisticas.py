@@ -1,9 +1,8 @@
-
 from collections import namedtuple
 import csv
-from datetime import date 
+from datetime import datetime
 
-Contador = namedtuple("Contador", ("fecha", date), ("tipo", str), ("cantidad", int))
+Contador = namedtuple("Contador", ["fecha", "tipo", "cantidad"])
 
 def lectura_registros(ruta: str) -> list[Contador]:
     """
@@ -21,7 +20,7 @@ def lectura_registros(ruta: str) -> list[Contador]:
         next(lector)  #hay encabezado en el archivo csv
 
         for fecha, tipo, cantidad in lector:                                    
-            fecha = date.strptime(fecha, "%Y/%m/%d")
+            fecha = datetime.strptime(fecha, "%Y-%m-%d")
             tipo = tipo.strip()
             cantidad = int(cantidad)
             registros.append(Contador(fecha, tipo, cantidad))

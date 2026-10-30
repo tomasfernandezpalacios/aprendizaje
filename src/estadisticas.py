@@ -20,7 +20,7 @@ def lectura_registros(ruta: str) -> list[Contador]:
         next(lector)  #hay encabezado en el archivo csv
 
         for fecha, tipo, cantidad in lector:                                    
-            fecha = datetime.strptime(fecha, "%Y-%m-%d")
+            fecha = datetime.strptime(fecha, "%Y-%m-%d").date()
             tipo = tipo.strip()
             cantidad = int(cantidad)
             registros.append(Contador(fecha, tipo, cantidad))

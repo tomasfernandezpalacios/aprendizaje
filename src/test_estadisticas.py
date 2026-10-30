@@ -10,7 +10,7 @@ def test_lectura_registros(registros):
     print("Los tres primeros son: ")
     mostrar_iterable_tab(registros[:3])
     print()
-    print("Los tres últomos son: ")
+    print("Los tres últimos son: ")
     mostrar_iterable_tab(registros[-3:])
 
 def main_tests():

@@ -1,0 +1,1 @@
+print("PROGRAMA DE ESTADÍSTICAS")
